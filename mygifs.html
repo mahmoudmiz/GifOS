@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" id="stylesheet" />
+    <title>my gifs</title>
+  </head>
+  <body>
+    <!-- start of header -->
+    <header>
+      <p class="Header__title">
+        ¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número
+        de visitas: 12.765.803
+      </p>
+    </header>
+    <!-- end of header -->
+    <div class="container">
+      <!-- main nav -->
+      <nav class="mainnav">
+        <a class="mainnav__logo" href="/"></a>
+
+        <div class="mainnav__links">
+          <button class="nav__btn mainnav__link createGif__btn">
+            Crear Guifos
+          </button>
+
+          <div class="mainnav__link">
+            <div class="dropdown__container">
+              <button class="nav__btn changeTheme__btn">
+                Elegir tema</button
+              ><span class="dropdown__icon"
+                ><img src="./assets/dropdown.svg" alt="dropdown icon"
+              /></span>
+            </div>
+
+            <div class="dropdown__list">
+              <button class="day__theme dropdown__link">
+                Sailor Day
+                <span class="day__theme--underline"></span>
+              </button>
+              <button class="night__theme dropdown__link">
+                Sailor Night
+                <span class="night__theme--underline"></span>
+              </button>
+            </div>
+          </div>
+          <div class="mainnav__link myGifs__link">
+            <a class="myGifs__btn" href="mygifs.html">Mis Guifos</a>
+            <span class="myGifs__underline"></span>
+          </div>
+        </div>
+      </nav>
+      <!-- start my gifs -->
+      <section class="mygifs__page">
+        <div class="boxTitle">
+          <p class="boxTitle__text">Mis guifos</p>
+        </div>
+        <div class="mygifs__gallery"></div>
+      </section>
+    </div>
+    <script src="mygifs.js"></script>
+  </body>
+</html>

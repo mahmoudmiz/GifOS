@@ -209,7 +209,7 @@ function progressBar(div) {
   let n = 0;
 
   progressBarInterval = setInterval(function () {
-    if (arrayOfSpans[n] && choosonTheme == "style.css") {
+    if (arrayOfSpans[n]) {
       arrayOfSpans[n].style.background = "#F7C9F3";
     }
     if (arrayOfSpans[n] && choosonTheme == "nightstyle.css") {

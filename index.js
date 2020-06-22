@@ -169,17 +169,6 @@ createGifBtn.addEventListener("click", () => {
 dropDownContainer.addEventListener("click", () => {
   dropDownList.classList.toggle("dropdown__list--active");
 });
-
-// chnage the theme on click
-dropDownList.addEventListener("click", (event) => {
-  if (event.target.classList.contains("night__theme")) {
-    dropDownList.classList.remove("dropdown__list--active");
-  } else if (event.target.classList.contains("day__theme")) {
-    dropDownList.classList.remove("dropdown__list--active");
-  } else {
-    dropDownList.classList.remove("dropdown__list--active");
-  }
-});
 // Listening to input changes
 searchInput.addEventListener("input", onInput);
 

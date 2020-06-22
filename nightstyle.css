@@ -461,10 +461,12 @@ header p {
 }
 .gallery__item__hashtags {
   background-image: linear-gradient(270deg, #ee3efe 0%, #2e32fb 100%);
+  height: 18px;
   position: relative;
   bottom: 22px;
   color: white;
   font-size: 14px;
+  overflow: hidden;
   display: block;
   display: none;
 }

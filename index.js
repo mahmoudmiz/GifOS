@@ -44,7 +44,6 @@ function getTrends() {
       results.data.forEach((element) => {
         console.log(element);
         let hashTagsArray = element.title.split(" ");
-        // hashTagsArray.length = 4;
         for (let i = 0; i < hashTagsArray.length; i++) {
           hashTagsArray[i] = "#" + hashTagsArray[i];
         }
@@ -183,7 +182,7 @@ searchAutoComplete.addEventListener("click", (event) => {
     searchAutoComplete.style.display = "none";
     getGifs(event.target.textContent);
     getTags(event.target.textContent);
-    searchInput.value = event.target.textContent.substring(1);
+    searchInput.value = event.target.textContent;
   }
 });
 

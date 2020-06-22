@@ -440,10 +440,12 @@ header p {
 }
 .gallery__item__hashtags {
   background-image: linear-gradient(270deg, #f7c9f3 0%, #4180f6 100%);
+  height: 18px;
   position: relative;
   bottom: 22px;
   color: white;
   font-size: 14px;
+  overflow: hidden;
   display: block;
   display: none;
 }

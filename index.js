@@ -16,14 +16,11 @@ const dayTheme = document.querySelector(".day__theme");
 const myStyleSheet = document.querySelector("#stylesheet");
 
 // change the theme on click and save the chosen theme for the user
-
 choosonTheme = localStorage.getItem(`theme`);
 if (choosonTheme) myStyleSheet.href = choosonTheme;
-
 dropDownList.addEventListener("click", (event) => {
   if (event.target.classList.contains("night__theme")) {
     dropDownList.classList.remove("dropdown__list--active");
-
     localStorage.setItem(`theme`, "nightstyle.css");
     choosonTheme = localStorage.getItem(`theme`);
     myStyleSheet.href = choosonTheme;
@@ -45,12 +42,12 @@ function getTrends() {
     })
     .then((results) => {
       results.data.forEach((element) => {
+        console.log(element);
         let hashTagsArray = element.title.split(" ");
-        hashTagsArray.length = 4;
+        // hashTagsArray.length = 4;
         for (let i = 0; i < hashTagsArray.length; i++) {
           hashTagsArray[i] = "#" + hashTagsArray[i];
         }
-
         let hashTagsStr = hashTagsArray.join(" ");
         let imageUrl = element.images.downsized.url;
         trendsGallery.innerHTML += `<div class="trends__gallery__item"><img src="${imageUrl}" class="trends__gallery__img" alt="trendy gif">
@@ -139,7 +136,6 @@ function getGifs(query) {
     })
     .catch((error) => console.log(error));
 }
-
 // get tags related to the search
 function getTags(term) {
   fetch(
@@ -159,7 +155,6 @@ function getTags(term) {
 
 getTrends();
 getSuggestion();
-
 // general event listeners
 createGifBtn.addEventListener("click", () => {
   location.href = "creategifs.html";
@@ -175,7 +170,6 @@ searchInput.addEventListener("input", onInput);
 // Listening to clicks on the form
 searchForm.addEventListener("submit", (event) => {
   event.preventDefault();
-
   if (searchInput.value) {
     getGifs(searchInput.value); // get the gifs
     getTags(searchInput.value);
